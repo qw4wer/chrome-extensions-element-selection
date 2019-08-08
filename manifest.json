@@ -1,0 +1,28 @@
+{
+  "name": "Element selection",
+  "version": "0.1",
+  "description": "Element selection injection js ",
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["hook.js"]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "webNavigation",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_title": "Make this page red"
+  },
+  "manifest_version": 2
+}
